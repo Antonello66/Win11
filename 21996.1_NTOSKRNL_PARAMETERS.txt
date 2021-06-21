@@ -1,0 +1,459 @@
+####################################################
+#                    Windows 11                    #
+#    FILE: NTOSKRNL / NT Kernel & System           #
+#    FILEVERSION:    21996.1                       #
+#    SECTION:        ALMOSTRO/CmControlVector      #
+#    AUTHOR:         St1cky                        #
+#    WEBSITE:        https://github.com/St1ckys    #
+#                                                  #
+####################################################
+
+
+"Session Manager\\Quota System"
+ApplicationBlockedMessageLimit 32h
+SystemBlockedMessageLimit 0C8h
+
+
+"Session Manager\\Memory Management"
+AllocationPreference 0
+AllowUserHotPatchWithoutVbs 0
+CacheUnmapBehindLengthInMB 8
+DeadlockRecursionDepthLimit 0
+DeadlockSearchNodesLimit 0
+DisablePageCombining 0
+DisablePagingExecutive 0
+DynamicMemory
+EnableCooling 0
+EnablePerVolumeLazyWriter 2
+ForceValidateIo 0
+HighMemoryThreshold 0
+KernelPadSectionsOverride 0
+LargePageDrivers 400h
+LargeWriteSize
+LazyWriterPercentageOfNumProcs
+LowMemoryThreshold 0
+MaxLazyWritePages
+MinimumStackCommitInBytes 0
+Mirroring 0
+ModifiedWriteMaximum 0
+MoveImages 1
+NonPagedPoolQuota 0
+PageValidationAction 0
+PageValidationFrequency 0
+PagedPoolQuota 0
+PagingFileQuota 0
+PhysicalMemoryMapperEnforcementMode 0
+PoolTag 0
+PoolTagOverruns 1
+PoolTagSmallTableSize
+ProtectNonPagedPool 0
+RemoteFileDirtyPageThreshold 140000h
+SimulateCommitSavings 0
+SoftThrottleDelayInMs
+SoftThrottleLargeWriteAtPct
+SpecialPurposeMemoryPages
+SpecialPurposeMemoryStartPage 8 0 0 0
+TopBottomDPTEqual
+TrackLockedPages 0
+TrackPtes 0
+VerifierDifPoolTags 28h
+VerifierFaultApplications 100h
+VerifierFaultBootMinutes 8h
+VerifierFaultProbability 258h
+VerifierFaultTags 100h
+VerifierHandleTraces 4000h
+VerifierIrpStackTraces 4000h
+VerifierIrpTimeout 0 
+VerifierNewRuleWorkaround
+VerifierOptions
+VerifierPoolTracesLength 0
+VerifierRandomTargets 0
+VerifierSettingState 8
+VerifierTipDisable
+VerifierTipLimitDenominator
+VerifierTipLimitNumerator
+VerifierTipSparseness
+VerifierTriageContext
+VerifyBTSBufferSize 0
+VerifyDriverLevel 0FFFFFFFFh
+VerifyDrivers 2FF, 1800h
+VerifyDriversSuppress 800h
+VerifyMode 0FFFFFFFFh
+VerifyTriage 0FFFFFFFFh
+VerifyTriageRules 1000h
+VmPauseOutswapSizeCapMB 200h
+WorkingSetPagesQuota 0
+WorkingSetSwapSharedPages
+XdvTipTag
+XdvVerifierOptions
+
+
+"Session Manager\\Executive"
+AdditionalCriticalWorkerThreads
+AdditionalDelayedWorkerThreads
+CoverageMaxPagedPool 400000h
+ForceEnableMutantAutoboost
+KernelWorkerTestFlags
+MaxTimeSeparationBeforeCorrect 3Ch
+MaximumKernelWorkerThreads 1000h
+TickcountRolloverDelay 0,?4,?4
+WorkerFactoryThreadCreationTimeout 0Ah
+WorkerFactoryThreadIdleTimeout 43h
+WorkerThreadTimeoutInSeconds 258h
+
+
+"Session Manager\\Kernel"
+AdjustDpcThreshold 14h
+AlwaysTrackIoBoosting 0
+BugCheckUnexpectedInterrupts
+CacheAwareScheduling 2Fh
+CacheErrataOverride 0
+DPCTimeout 4E20h
+DebugPollInterval 7D0h
+DebuggerIsStallOwner
+DeviceOwnerProtectionDowngradeAllowed
+DisableControlFlowGuardExportSuppression 0
+DisableControlFlowGuardXfg
+DisableExceptionChainValidation 2
+DisableLightWeightSuspend 0
+DisableLowQosTimerResolution 1
+DisableTsx 0
+DpcCumulativeSoftTimeout 1D4C0h
+DpcQueueDepth 4
+DpcSoftTimeout 4E20h
+DpcWatchdogPeriod 1D4C0h
+DpcWatchdogProfileBufferSizeBytes 0FFFFFFFFh
+DpcWatchdogProfileCumulativeDpcThreshold 0FFFFFFFFh
+DpcWatchdogProfileOffset 0
+DpcWatchdogProfileSingleDpcThreshold 0FFFFFFFFh
+EnablePerCpuClockTickScheduling 0
+EnableWerUserReporting 1
+ForceBugcheckForDpcWatchdog 0
+ForceForegroundBoostDecay 0
+ForceIdleGracePeriod 5
+GlobalTimerResolutionRequests 0
+HeteroFavoredCoreFallback 00 00 00 00
+HeteroSchedulerOptions 0
+HgsPlusFeedbackUpdateThresholdNetRuntime 14h
+HgsPlusFeedbackUpdateThresholdRuntime 14h
+HgsPlusHigherPerfClassFeedbackThreshold 1
+HgsPlusInvalidFeedbackDefaultClass 0
+HgsPlusInvalidFeedbackDefaultClassSet 0
+HgsPlusInvalidFeedbackLimit 32h
+HgsPlusLowerPerfClassFeedbackThreshold 4
+HgsPlusMinimumScoreDifferenceForSwap 19h
+HgsPlusThreadCreationDefaultClass 0
+HyperStartDisabled
+IdealNodeRandomized 1
+InterruptSteeringFlags 0
+KiMaxDynamicTickDuration dq 0FFFFFFFFFFFFFFFFh
+KiMaxDynamicTickDurationSize db    8 0 0 0
+LongDpcQueueThreshold 3
+LongDpcRuntimeThreshold 64h
+MaximumSharedReadyQueueSize 104h
+MinimumDpcRate 3
+MitigationAuditOptions 18h
+MitigationOptions 18h
+ObCaseInsensitive 1
+ObObjectSecurityInheritance
+ObTracePermanent
+ObTracePoolTags 80h 0 0 0
+ObTraceProcessName 80h 0 0 0
+ObUnsecureGlobalNames 0 1 0 0
+PassiveWatchdogTimeout 12Ch
+PerfIsoEnabled 0
+PoCleanShutdownFlags
+PowerOffFrozenProcessors 01 00 00 00 0F 00 00 00
+RNGAuxiliarySeed
+RebalanceMinPriority 1
+ReservedCpuSets
+SchedulerAssistThreadFlagOverride 0
+SeAllowAllApplicationAceRemoval 0
+SeAllowSessionImpersonationCapability 0
+SeCompatFlags 00 00 00 00
+SeLpacEnableWatsonReporting
+SeLpacEnableWatsonThrottling 1
+SeTokenDoesNotTrackSessionObject 0
+SeTokenLeakDiag dq 1000100h
+SeTokenSingletonAttributesConfig
+SerializeTimerExpiration 1
+SplitLargeCaches 0
+ThreadDpcEnable 1
+TimerCheckFlags 1
+VerifierDpcScalingFactor 1
+VirtualHeteroHysteresis 0FFFFFFFFh
+VpThreadSystemWorkPriority 1Eh
+
+
+"KernelVelocity"
+KVF_HotPatchSimulation 0
+
+
+"Session Manager\\Power"
+ActiveIdleLevel 1
+ActiveIdleThreshold 1F4h
+ActiveIdleTimeout 3E8h
+AllowAudioToEnableExecutionRequiredPowerRequests 1
+AllowSystemRequiredPowerRequests 1
+AlwaysComputeQosHints 0
+BootHeteroPolicyOverride 1
+CheckPowerSourceAfterRtcWakeTime 1Eh
+CheckpointSystemSleep 
+CheckpointSystemSleepSimulateFlags
+Class1InitialUnparkCount 0
+CoalescingFlushInterval 3C
+CoalescingTimerInterval 5DCh
+DeepIoCoalescingEnabled 0
+DirectedDripsAction 3 0 0 0
+DirectedDripsDebounceInterval 78 0 0 0
+DirectedDripsDfxEnforcementPolicy 1
+DirectedDripsOverride 0FFFFFFFFh
+DirectedDripsSurprisePowerOnTimeout 5
+DirectedDripsTimeout 12Ch
+DirectedDripsWaitWakeTimeout 5
+DirectedFxDefaultTimeout 78h
+DisableDisplayBurstOnPowerSourceChange
+DisableIdleStatesAtBoot 0FFFFFFFFh
+DisableInboxPepGeneratedConstraints 0FFFFFFFFh
+DisableVsyncLatencyUpdate 0
+DozeDeferralChecksToIgnore 0
+DozeDeferralMaxSeconds 3F480h
+DripsCallbackInterval 23h
+DripsSwHwDivergenceEnableLiveDump 0
+DripsSwHwDivergenceThreshold 10Eh
+DripsWatchdogAction 0C6h
+DripsWatchdogDebounceInterval 78h
+DripsWatchdogTimeout 12Ch
+EnableInputSuppression 0FFFFFFFFh
+EnableMinimalHiberFile
+EnablePowerButtonSuppression db FF FF FF FF
+EnergyEstimationEnabled
+EnforceConsoleLockScreenTimeout 4
+EnforceDisconnectedStandby 0
+EventProcessorEnabled 0
+ExitLatencyCheckEnabled 1
+FlushPolicy 0
+ForceMinimalHiberFile
+FxAccountingTelemetryDisabled
+FxRuntimeLogNumberEntries 40h
+HeteroFavoredCoreRotationTimeoutMs 7530h
+HeteroHgsPlusDisabled 0
+HeteroModuleUnparkPolicy 0
+HeterogeneousPpmImplementation 1
+HiberFileTypeDefault 0FFFFFFFFh
+HiberbootEnabled 0 0 0 0
+HibernateChecksummingEnabled 1
+HibernateEnabledDefault 0FFFFFFFFh
+HighPerfDurationBoot db
+HighPerfDurationCSExit db
+HighPerfDurationSxExit db
+IdleDurationExpirationTimeout 4
+IdleProcessorsRequireQosManagement
+IdleScanInterval 0FFFFFFFFh
+IdleStateTimeout 1F4h - TolerableDelay
+IgnoreCsComplianceCheck 
+IgnoreLidStateForInputSuppression 0FFFFFFFFh
+IpiLastClockOwnerDisable 0
+LatencyToleranceDefault 186A0h
+LatencyToleranceFSVP 4E20h
+LatencyToleranceIdleResiliency 16E360h
+MSDisabled 0
+MaximumFrequencyOverride
+MfBufferingThreshold 0
+MfOverridesDisabled 1 0 0 0
+MultiparkGranularity 8
+ParkWithCoreGranularity 1
+PdcIdlePhaseDefaultWatchdogTimeoutSeconds 1Eh
+PdcOneWayEntry
+PerfArtificialDomain 0FFFFFFFFh
+PerfBoostAtGuaranteed 0
+PerfCalculateActualUtilization 1
+PerfIdealAggressiveIncreasePolicyThresh 5Ah
+PerfQueryOnDevicePowerChanges
+PerfSingleStepSize 5
+PlatformAoAcOverride 0FFFFFFFFh
+PlatformRoleOverride 0FFFFFFFFh
+PoFxSystemIrpWaitForReportDevicePowered
+PowerActionResumeWatchdogTimeoutDefault 12Ch
+PowerActionSuspendWatchdogTimeoutDefault 258h
+PreSleepNotificationSeconds 12Ch
+PromoteHibernateToShutdown 0
+ProximityEscapeMsec 0
+SkipHibernateMemoryMapValidation 0FFFFFFFFh
+SkipTickOverride 1
+SleepStudyDeviceAccountingLevel 4 
+SleepStudyDisabled
+SleepstudyAccountingEnabled 1
+SmartUserPresenceAction 0
+SmartUserPresenceCheckTimeout 2A30h
+SmartUserPresenceGracePeriod 708h
+SmartUserPresenceWakeOffset 12Ch
+StandbyConnectivityGracePeriod 0
+SuppressResumePrompt
+ThermalPollingMode
+ThermalTelemetryVerbosity 1
+TimerRebaseThresholdOnDripsExit 3Ch
+TtmEnabled 0
+UserBatteryChargeEstimator
+UserBatteryDischargeEstimator
+WatchdogResumeTimeout 258h
+WatchdogSleepTimeout 258h
+WatchdogWorkOrderTimeout 493E0h
+Win32CalloutWatchdogBugcheckEnabled 0
+Win32kCalloutWatchdogTimeoutSeconds 1Eh
+
+
+"Session Manager\\Power\\HiberFileBucket"
+Percent1GBFull db 28 00 00 00 00 00 00 00 00 00
+Percent1GBReduced 14 00 00 00 
+Percent2GBFull 28 00 00 00 00 00 00 00 00 00
+Percent2GBReduced 14 00 00 00 
+Percent4GBFull 28 00 00 00 00 00 00 00 00 00
+Percent4GBReduced 14 00 00 00 
+Percent8GBFull 28 00 00 00 00 00 00 00 00 00
+Percent8GBReduced 114 00 00 00 
+Percent16GBFull 28 00 00 00 00 00 00 00 00 00
+Percent16GBReduced 14 00 00 00 
+Percent32GBFull 28 00 00 00 00 00 00 00 00 00
+Percent32GBReduced 14 00 00 00 
+PercentUnlimitedFull 28 00 00 00 00 00 00 00 00 00
+PercentUnlimitedReduced 14 00 00 00 
+
+
+"Session Manager\\Power\\ModernSleep"
+EnabledActions 0
+EnableDsNetRefresh 0
+
+
+"Session Manager\\Power\\PowerThrottling"
+PowerThrottlingOff 0
+
+
+"Session Manager\\I/O System"
+DisableDiskCounters 0
+IoAllowLoadCrashDumpDriver
+IoBlockLegacyFsFilters
+IoCaseInsensitive 1
+IoEnableSessionZeroAccessCheck
+IoFailZeroAccessCreate 1
+IoIrpCompletionTimeoutInSeconds
+LargeIrpStackLocations
+MediumIrpStackLocations
+RequireDeviceAccessCheck 1
+
+
+"Session Manager"
+AlpcMessageLog
+Alpcwakepolicy 1
+CriticalSectionTimeout 278D00h
+DisableIFEOCaching
+ErrorPortCommTimeout 2710h
+ErrorPortStartTimeout 3A98h
+HeapDeCommitFreeBlockThreshold 1000h
+HeapDeCommitTotalFreeThreshold 10000h
+HeapSegmentCommit 2000h
+HeapSegmentReserve 100000h
+ImageExecutionOptions 0
+InitConsoleFlags 0
+MultiUsersInSessionSupported
+PowerPolicySimulate
+PowerSimulateHiberBugcheck
+ResourceCheckFlags 3
+ResourceEnforceOwnerTransfer
+ResourceTimeoutCount
+
+
+"Session Manager\\Configuration Manager"
+BugcheckRecoveryEnabled
+DelayCloseSize 800h
+EnablePeriodicBackup
+FastBoot 1
+FreezeThawTimeoutInSeconds
+RegistryFlushGlobalFlags
+RegistryLazyFlushBootDelay 3Ch
+RegistryLazyFlushInterval 3Ch
+RegistryLazyLocalizeInterval 3Ch
+RegistryLazyReconcileInterval 0E10h
+RegistryLogFileSizeCap
+RegistryReorganizationLimit 100000h
+RegistryReorganizationLimitDays 7
+SelfHealingEnabled 1
+SystemHiveLimitSize
+VirtualizationEnabled 1
+VolatileBoot
+
+
+"Session Manager\\Configuration Manager\\LastKnownGood"
+Enabled 0
+
+
+"StateSeparation\\Policy"
+Enabled
+DevelopmentMode
+AllHivesVolatile
+
+
+"PriorityControl"
+Win32PrioritySeparation 2
+
+
+"WHEA"
+SingleBitEccErrorThreshold 0FFFFFFFFh
+MaxCorrectedMCEOutstanding 0FFFFFFFFh
+
+"WHEA\\Policy"
+BadPageListLocation 0FFFFFFFFh
+BadPageListMaxSize 0FFFFFFFFh
+CMCPollingLimit 0FFFFFFFFh
+CMCThresholdCount 0FFFFFFFFh
+CMCThresholdSeconds 0FFFFFFFFh
+DisableOffline 0FFFFFFFFh
+IgnoreDummyWrite 0FFFFFFFFh
+MemPersistOffline 0FFFFFFFFh
+MemPfaDisable 0FFFFFFFFh
+MemPfaPageCount 0FFFFFFFFh
+MemPfaThreshold 0FFFFFFFFh 
+MemPfaTimeout 0FFFFFFFFh
+NotifyAllOfflines 0FFFFFFFFh
+PendingPageListSz 0FFFFFFFFh
+RestoreCmciEnabled 0FFFFFFFFh
+RestoreCmciErrorLimit 0FFFFFFFFh
+RestoreCmciMaxAttempts 0FFFFFFFFh
+
+
+"WMI\\Trace"
+CoverageEntryCount 1000h
+CoverageFlushPeriod 493E0h
+CoverageResetPeriod 5265C00h
+MemInfoInterval 1F4h
+ProfileInterval 2710h
+StackCaptureTimeout 190h
+
+
+"EmbeddedNT\\Executive"
+KernelOnlyConfiguration 0
+
+
+"CrashControl"
+AutoReboot
+FullLiveReportsMax
+
+"ValidationRunlevels"
+Global 0
+
+"Session Manager\\Power\\ForceHibernateDisabled"
+GuardedHost 00 00 00 00
+Policy 00 00 00 00
+
+
+"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PnP"
+DisableLKG
+LKG=LastKnownGood
+
+"\\Registry\\Machine\\Software\\Policies\\Microsoft\\SQMClient\\Windows"
+"\\Registry\\Machine\\Software\\Microsoft\\SQMClient\\Windows"
+"CEIPEnable"
+
+
+
+
